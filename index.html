@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High-Tech Academy | Advanced Computer Training</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f2f2f5;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #6c63ff;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      background: #f3f3f3;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background: linear-gradient(90deg, #6c63ff, #006400);
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 8%;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      color: #222;
+    }
+
+    .hero-text h1 span {
+      color: #6c63ff;
+    }
+
+    .hero-sub {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      color: #444;
+    }
+
+    .hero-desc {
+      margin-top: 20px;
+      max-width: 600px;
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #6c63ff, #006400);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background: white;
+      border: 2px solid #6c63ff;
+      color: #6c63ff;
+    }
+
+    .btn-secondary:hover {
+      background: #6c63ff;
+      color: white;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .partners {
+      background: #fff;
+      padding: 30px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+    }
+
+    .partners img {
+      height: 30px;
+      filter: grayscale(1);
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .partners img:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-sub {
+        font-size: 1.1rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .partners {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        display: none;
+      }
+
+      header {
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" ><img width="120px" src="hightech-logo.png"/></div>
+    <nav>
+      <a href="#">For Students</a>
+      <a href="#">For Enterprises</a>
+      <a href="#">Programs</a>
+      <a href="#">Success Stories</a>
+      <a href="#">Custom Courses</a>
+      <a href="#">FAQ</a>
+      <a href="#">About Us</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Ready-made <br><span>Computer Training</span></h1>
+      <div class="hero-sub">For Business and Education</div>
+      <p class="hero-desc">
+        Experience cutting-edge, immersive learning in Artificial Intelligence, Cybersecurity,
+        Cloud Computing, Data Science, and Software Development. Our industry-aligned
+        programs empower individuals and enterprises with future-ready digital skills.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" id="startLearning">Start Learning</button>
+        <button class="btn-secondary" id="bookCall">Book a Demo Call</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="High-Techman.png" alt="High-Tech Learning" />
+    </div>
+  </section>
+
+  <section class="partners">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Lenovo_logo_2015.svg" alt="Lenovo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Intel_logo_%282020%2C_dark_blue%29.svg" alt="Intel">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Cisco_logo_blue_2016.svg" alt="Cisco">
+  </section>
+
+  <script>
+    document.getElementById('startLearning').addEventListener('click', () => {
+      alert('Welcome to High-Tech Academy! Your journey to advanced computer training begins here.');
+    });
+
+    document.getElementById('bookCall').addEventListener('click', () => {
+      alert('A representative will contact you shortly to schedule your demo call.');
+    });
+  </script>
+</body>
+</html>
